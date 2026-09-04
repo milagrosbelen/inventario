@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventario · oficio de software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="nav">
+      <div class="brand">
+        <p>Inventario de oficio</p>
+        <h1>Lo que sé y lo que cuido ahora</h1>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Vistas">
+        <button type="button" role="tab" id="tab-soft" aria-selected="true" aria-controls="view-soft" data-view="soft">Software completo</button>
+        <button type="button" role="tab" id="tab-skills" aria-selected="false" aria-controls="view-skills" data-view="skills">Skills</button>
+        <button type="button" role="tab" id="tab-now" aria-selected="false" aria-controls="view-now" data-view="now">Ahora</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="view on" id="view-soft" role="tabpanel" aria-labelledby="tab-soft">
+        <p class="kicker">Vista 1</p>
+        <h2 class="section">Cómo se crea un software que aguanta</h2>
+        <p class="lede">
+          No es una lista de cursos. Es el camino que tiene que recorrer una petición
+          —por ejemplo una orden en <strong>Drivox</strong>— sin romperse cuando hay más personas.
+          Si una sola caja hace todo, se satura. Si cada capa hace una cosa, escala.
+        </p>
+
+        <div class="split">
+          <ol class="flow">
+            <li>
+              <span class="num">01</span>
+              <div class="card">
+                <h3>Quién lo usa</h3>
+                <p>Dueño, mecánico, cliente. Sin esto no hay “listo”: solo pantallas.</p>
+                <ul class="chips"><li>Roles</li><li>Qué puede hacer cada uno</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <div class="card">
+                <h3>Que llegue por internet</h3>
+                <p>Nombre, dirección y candado. Si solo anda en tu PC, no es un producto.</p>
+                <ul class="chips"><li>Dominio</li><li>DNS</li><li>IP</li><li>HTTPS</li><li>Hosting</li><li>CDN</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <div class="card">
+                <h3>Lo que se ve (cliente)</h3>
+                <p>Web o celular. Dibuja y pide datos. No habla directo con la base.</p>
+                <ul class="chips"><li>HTML / CSS</li><li>JavaScript + DOM</li><li>Fetch / JSON</li><li>Expo</li><li>KMP (trabajo)</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">04</span>
+              <div class="card">
+                <h3>Contrato de la API</h3>
+                <p>Qué se pide, qué vuelve, en qué formato. Sin contrato, frontend y backend se pisan.</p>
+                <ul class="chips"><li>REST</li><li>GET POST PUT DELETE</li><li>JSON</li><li>Endpoints</li><li>Async / promesas</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">05</span>
+              <div class="card">
+                <h3>Reglas de negocio (backend)</h3>
+                <p>Acá vive “se puede crear esta orden”. Login, permisos, validar. Un controlador no puede hacerlo todo.</p>
+                <ul class="chips"><li>C# / Laravel</li><li>Capas</li><li>POO</li><li>JWT / middleware</li><li>Sin god controller</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">06</span>
+              <div class="card">
+                <h3>Datos</h3>
+                <p>Tablas con sentido, claves, consultas. Índices y backups para que no se ponga lenta ni se pierda.</p>
+                <ul class="chips"><li>Modelo E-R</li><li>PK / FK</li><li>SQL</li><li>EF / Eloquent</li><li>Triggers / vistas</li></ul>
+              </div>
+            </li>
+            <li>
+              <span class="num">07</span>
+              <div class="card">
+                <h3>Que se pueda cambiar</h3>
+                <p>Git, pruebas, logs, deploy. Software mantenible = otra persona (o vos en tres meses) puede tocar una pieza.</p>
+                <ul class="chips"><li>Git / PR</li><li>Testing</li><li>Deploy</li><li>Logs</li><li>Cache</li></ul>
+              </div>
+            </li>
+          </ol>
+
+          <div>
+            <p class="kicker">Requisitos para no perderte</p>
+            <h2 class="section" style="font-size:1.35rem">Si falta esto, se rompe</h2>
+            <div class="req-grid">
+              <div class="req"><i class="mark gold"></i><div><b>Arquitectura</b><span>Cada capa una responsabilidad. Es el hueco que más sentís, y ya tocaste capas en C#.</span></div></div>
+              <div class="req"><i class="mark warn"></i><div><b>Auth</b><span>Quién entra y qué ve. Laravel JWT lo viste; hay que ponerlo de punta a punta.</span></div></div>
+              <div class="req"><i class="mark warn"></i><div><b>Testing de verdad</b><span>No solo la definición de QA. Tres pruebas del flujo que más duele.</span></div></div>
+              <div class="req"><i class="mark"></i><div><b>Seguridad web</b><span>HTTPS, no subir claves, validar entradas, tríada CIA y OWASP aplicados.</span></div></div>
+              <div class="req"><i class="mark warn"></i><div><b>Performance</b><span>Índices, no consultar mil veces, cache e invalidar cuando el dato cambia.</span></div></div>
+              <div class="req"><i class="mark warn"></i><div><b>Deploy / DevOps</b><span>Ambientes y un servidor. El trial de cloud vive acá.</span></div></div>
+              <div class="req"><i class="mark"></i><div><b>Estado y sync</b><span>Qué hay en pantalla vs qué hay en la base. Async bien usado.</span></div></div>
+              <div class="req"><i class="mark gold"></i><div><b>Contrato REST</b><span>Lo viste con Swagger. Hay que respetarlo en Drivox y en el laburo.</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-skills" role="tabpanel" aria-labelledby="tab-skills" hidden>
+        <p class="kicker">Vista 2</p>
+        <h2 class="section">Inventario de skills</h2>
+        <p class="lede">
+          Esto no es un temario para memorizar otra vez. Es <strong>capacidad</strong>:
+          lo que ya podés aportar. Abrí cada bloque si querés ver los temas exactos.
+        </p>
+
+        <div class="stats">
+          <div class="stat"><em>2</em><small>Orígenes: autodidacta y facultad</small></div>
+          <div class="stat"><em>12</em><small>Bloques de oficio</small></div>
+          <div class="stat"><em>KMP</em><small>Lo nuevo del trabajo, todavía no está acá</small></div>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar origen">
+          <button type="button" class="on" data-filter="all">Todo</button>
+          <button type="button" data-filter="auto">Autodidacta</button>
+          <button type="button" data-filter="facu">Facultad</button>
+        </div>
+
+        <article class="acc" data-origen="auto">
+          <button type="button" class="acc-btn"><span><span class="tag">Autodidacta · 2024</span><strong>Fundamentos de sistemas</strong><em>Aporto contexto: sé de qué hablamos cuando decimos software, red, web.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Software y hardware; ordenadores; rol del programador; lógica y algoritmos; internet y web; protocolos; binario; applets; IA vs ML; hipertexto e hipermedia; URL; IP y DNS; diseño vs desarrollo; Wix, frameworks, mockups, prototipos.</div>
+        </article>
+
+        <article class="acc" data-origen="auto">
+          <button type="button" class="acc-btn"><span><span class="tag">Autodidacta</span><strong>Puedo armar la parte visible</strong><em>HTML, CSS y la diferencia frontend / backend.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">
+            <ul>
+              <li>HTML: estructura, etiquetas, listas, imágenes, tablas, formularios, select, atributos</li>
+              <li>CSS: modelo de caja, unidades, display, justify, contenedores, position, bordes, texto, enlaces</li>
+              <li>Dominio, hosting, frontend vs backend</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acc" data-origen="auto">
+          <button type="button" class="acc-btn"><span><span class="tag">Autodidacta</span><strong>Puedo programar lógica en JavaScript</strong><em>De algoritmos y bucles hasta Fetch, módulos y el DOM.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">
+            <ul>
+              <li>Algoritmos, condicionales, while / for / do-while, switch, arreglos y matrices</li>
+              <li>Funciones, procedimientos, variables locales y globales, tipos, operadores</li>
+              <li>Objetos, constructores, POO, JSON, strings, fechas</li>
+              <li>DOM, eventos, forEach, promesas, Fetch, import/export, Math, setTimeout</li>
+              <li>Práctica: contador, reloj digital</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acc" data-origen="auto">
+          <button type="button" class="acc-btn"><span><span class="tag">Autodidacta</span><strong>Puedo versionar con Git</strong><em>El trabajo y Drivox viven de esto todos los días.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Cuenta y repositorio, clonar, commit, subir cambios, pull request, comandos básicos.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Puedo modelar y consultar datos</strong><em>Base de datos: del modelo E-R al SQL de turnos.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">
+            <ul>
+              <li>Fases de diseño, abstracción, agregación, cardinalidad, modelo conceptual</li>
+              <li>Entidad-relación, entidades, PK, FK, clave compuesta, tabla puente</li>
+              <li>Consultas, insert y resto de operaciones, funciones, crear la base</li>
+              <li>Procedimientos, vistas, backups, triggers, normalización</li>
+              <li>Práctica de turnos: buscar, modificar, contar, auditar, historial</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Puedo exponer una API en C#</strong><em>Capas, Entity Framework, Swagger, REST.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">
+            <ul>
+              <li>C#, clases, POO (encapsulamiento, herencia, polimorfismo, abstracción)</li>
+              <li>Arquitectura en capas: presentación, negocio, datos, entidades</li>
+              <li>Librerías, Visual Studio, Entity Framework</li>
+              <li>API, endpoints, métodos HTTP, controladores, Swagger</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Puedo armar backend con Laravel</strong><em>Rutas, Eloquent, middleware, JWT, Blade.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">PHP (variables, tipos, operadores, funciones, arrays). Laravel: rutas, controllers, models, migraciones, Eloquent, middleware, autenticación, Blade, AJAX, JWT, CRUD, scaffold, enrutamiento, HTTP/HTTPS, render.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Entiendo cómo existe un sitio</strong><em>WWW, cliente-servidor, WordPress como CMS.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">CMS; WWW; evolución y arquitectura web; HTTP/HTTPS; tipos de sitios; IP, dominio, DNS; hosting, ISP, CDN; WordPress (usar, páginas, XAMPP); cliente-servidor; recorrido de una URL; empaquetar producción.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Entiendo el proceso de construir software</strong><em>Ciclo de vida, ágil, calidad. Falta practicarlo en Drivox.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Ciclo de vida (también mobile); modelos primitivo, tradicional, prototipado, evolutivo, incremental, iterativo, win-win; proceso unificado; planificación; requerimientos; manifiesto ágil; Scrum (sprint, ceremonias, artefactos); métricas; testing en principio; QA vs QC; calidad de producto y de proceso.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Tengo brújula de seguridad</strong><em>CIA y OWASP de entrada. Falta aplicarlas en el código.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Actores de ciberseguridad; tríada CIA (confidencialidad, integridad, disponibilidad); conceptos complementarios; OWASP. En inglés: ataques, privacy, networking, seguridad en desarrollo web.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad · en curso</span><strong>Estoy entrando a móvil</strong><em>React Native con Expo. El trabajo suma KMP.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Aplicaciones móviles con React Native y Expo. Objetivo: que la app hable con una API, no solo pantallas sueltas.</div>
+        </article>
+
+        <article class="acc" data-origen="facu">
+          <button type="button" class="acc-btn"><span><span class="tag">Facultad</span><strong>Inglés técnico</strong><em>Gramática + textos de redes, seguridad y LinkedIn.</em></span><span class="plus">+</span></button>
+          <div class="acc-body">Lexical y functional words; todos los tiempos de presente, pasado y futuro; vocabulario de network y servidores; data protection / security / privacy; ciberseguridad; agree/disagree; LinkedIn; conditionals; seguridad en web. Falta: hablar 15 minutos, no otro manual.</div>
+        </article>
+      </section>
+
+      <section class="view" id="view-now" role="tabpanel" aria-labelledby="tab-now" hidden>
+        <p class="kicker">Vista 3</p>
+        <h2 class="section">A qué prestar atención ahora</h2>
+        <p class="lede">
+          Septiembre no es “todo un poco”. <strong>Facultad y el trabajo mandan.</strong>
+          Drivox, la ropa y la marca no se abandonan: se cumplen en piso. El cuerpo tampoco se negocia.
+        </p>
+
+        <div class="now-grid">
+          <article class="now hero">
+            <p class="meta">Trabajo · lunes a viernes</p>
+            <h3>Kotlin Multiplatform · 3 horas</h3>
+            <p>Todavía no es un skill del inventario. Es el laboratorio. Van a mirar cómo laburás, no si ya sabías el lenguaje.</p>
+            <p>Puente con lo que sí sabés: POO, APIs REST, capas, git, HTTP, y móvil con Expo. KMP comparte la lógica; cada plataforma dibuja la pantalla.</p>
+            <div class="hours" aria-label="Días con bloque de 3 horas">
+              <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span class="off">S</span><span class="off">D</span>
+            </div>
+            <label class="check"><input type="checkbox" data-k="kmp-hoy" /> Hoy hice el bloque (clonar / entender / un cambio chico)</label>
+            <div class="obj"><b>Objetivo de estos 30 días:</b> que el proyecto corra, saber dónde se toca cada cosa, y dejar un cambio visible con git.</div>
+          </article>
+
+          <article class="now">
+            <p class="meta">Facultad · en curso</p>
+            <h3>Aplicaciones móviles</h3>
+            <p>React Native con Expo.</p>
+            <div class="obj"><b>Objetivo para rendir:</b> explicar el flujo de una app (pantallas → estado → pedido a un servidor) y dejar una entrega que navegue y muestre datos, no un collage de componentes.</div>
+            <label class="check"><input type="checkbox" data-k="facu-expo" /> Esta semana avancé un pedazo concreto (una pantalla o un fetch)</label>
+          </article>
+
+          <article class="now">
+            <p class="meta">Facultad · en curso</p>
+            <h3>Inglés</h3>
+            <p>Ya viste tiempos verbales y textos de redes, privacidad, ciberseguridad y LinkedIn.</p>
+            <div class="obj"><b>Objetivo para rendir:</b> entender esos textos y producir oraciones claras (incluso conditionals). Por tu cuenta: 15 min hablando, no otro curso.</div>
+            <label class="check"><input type="checkbox" data-k="ingles-hoy" /> Hablé o leí en voz alta 15 minutos</label>
+          </article>
+
+          <article class="now">
+            <p class="meta">Facultad · si te queda mesa o final</p>
+            <h3>Materias ya vistas</h3>
+            <p>Están en Skills. Acá solo el objetivo si tenés que rendirlas.</p>
+            <div class="obj"><b>Base de datos:</b> armar un E-R con PK/FK y escribir consultas + un procedimiento o vista.</div>
+            <div class="obj"><b>C# / API:</b> explicar capas y exponer un endpoint con EF (CRUD mínimo).</div>
+            <div class="obj"><b>Laravel:</b> ruta → controller → modelo → respuesta; auth o middleware nombrado.</div>
+            <div class="obj"><b>CMS / WordPress:</b> cliente-servidor, DNS/hosting y qué problema resuelve un CMS (no es Drivox).</div>
+            <div class="obj"><b>Desarrollo de software:</b> un modelo de ciclo de vida + ágil vs tradicional + QA vs QC + un principio de testing.</div>
+            <div class="obj"><b>Ciberseguridad:</b> tríada CIA + un riesgo web (OWASP) dicho en criollo.</div>
+          </article>
+
+          <article class="now">
+            <p class="meta">Proyecto · Drivox</p>
+            <h3>El taller de motos</h3>
+            <p>Acá se nota si el diagrama de la vista 1 está o no. Los errores que no querés repetir son capas mezcladas, un controlador dios, y “en mi máquina anda”.</p>
+            <div class="obj"><b>Atención ahora:</b> una próxima acción, no reescribir todo. Ejemplo: un flujo (crear orden) que respete API + reglas + datos, o un test, o un arreglo de seguridad. El trial manda; Drivox no se come las 3 h de KMP.</div>
+            <label class="check"><input type="checkbox" data-k="drivox" /> Esta semana toqué Drivox con un cambio chico y claro</label>
+          </article>
+
+          <article class="now">
+            <p class="meta">Negocio de ropa · más apuro</p>
+            <h3>Contenido que venda</h3>
+            <p>No hay materia. Oficio: a quién le hablás, una oferta visible, gancho, camino a WhatsApp/DM, 2 piezas por semana.</p>
+            <label class="check"><input type="checkbox" data-k="ropa1" /> Contenido 1 publicado o programado</label>
+            <label class="check"><input type="checkbox" data-k="ropa2" /> Contenido 2 publicado o programado</label>
+          </article>
+
+          <article class="now">
+            <p class="meta">Marca personal · menos apuro</p>
+            <h3>Que te compren proyectos</h3>
+            <p>Una pieza por semana. Mostrar oficio real (facu o trial, sin secretos). Oferta en una frase: “te hago X”.</p>
+            <label class="check"><input type="checkbox" data-k="marca" /> 1 contenido de marca esta semana</label>
+          </article>
+
+          <article class="now">
+            <p class="meta">Cuerpo</p>
+            <h3>Yoga y ejercicio</h3>
+            <p>Tres veces. No es un proyecto de estudio. Si esto cae, cae el resto.</p>
+            <label class="check"><input type="checkbox" data-k="yoga1" /> Sesión 1</label>
+            <label class="check"><input type="checkbox" data-k="yoga2" /> Sesión 2</label>
+            <label class="check"><input type="checkbox" data-k="yoga3" /> Sesión 3</label>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
